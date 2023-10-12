@@ -1,0 +1,199 @@
+/* #region MAIN_ORGANISATION */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+main {
+
+    height: 100vh;
+    width: 95vw;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* #endregion */
+
+/* #region COMMON */
+
+.restartButton input {
+    background-image: url(../img/refresh.png);
+    height: 64px;
+    width: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+/* #endregion */
+
+/* #region GRID */
+
+#grid {
+    display: grid;
+    margin: 2vh 0 0 0;
+}
+
+/* #endregion */
+
+/* #region CASES */
+
+.case {
+    border: rgba(49, 49, 49, 0.705) .5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+/* #endregion */
+
+
+
+
+
+/* #region ATH */
+
+#hud {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 2vh 0;
+}
+
+#hud input {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
+#hud #interactableHud, #hud #infoCreation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#hud #infoCreation{
+    justify-content: center;
+}
+
+#hud #interactableHud .restartButton {
+    padding: 0vh 5vw;
+}
+
+#hud #interactableHud #restartButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 2vw;
+}
+#hud #infoCreation h1{
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 1vh 2vw;
+}
+#hud #infoCreation h2{
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 1vh 2vw;
+    color: rgb(187, 180, 117);
+}
+
+
+/* #endregion */
+
+
+/* #region OVERLAY */
+
+#overlayEnd {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+}
+
+#overlayEnd #overlayEndContainer{
+    position: absolute;
+  top: 40%;
+  left: 50%;
+  background-color: beige;
+  width: 70vw;
+  height: 40vh;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#overlayEnd #overlayEndContainer #overlayResult{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#overlayEnd #overlayEndContainer div{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+
+/* #endregion */
+
+/* #region Responsive */
+
+@media only screen and (min-width: 528px) {
+    #hud #interactableHud, #hud #infoCreation {
+        flex-direction: row;
+    }
+
+    #hud #interactableHud #restartButton {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .case {
+        font-size: 2vmin;
+    }
+
+    #hud {
+        width: 640px;
+        margin: 0;
+    }
+}
+
+/* #endregion */
