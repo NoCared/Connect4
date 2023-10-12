@@ -35,6 +35,7 @@ main {
     background-color: transparent;
     border: none;
 }
+
 /* #endregion */
 
 /* #region GRID */
@@ -42,19 +43,21 @@ main {
 #grid {
     display: grid;
     margin: 2vh 0 0 0;
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 /* #endregion */
 
-/* #region CASES */
+/* #region CIRCLE */
 
-.case {
+
+.circle {
     border: rgba(49, 49, 49, 0.705) .5px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 3vw;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /* #endregion */
@@ -84,14 +87,16 @@ main {
     border: none;
 }
 
-#hud #interactableHud, #hud #infoCreation {
+#hud #interactableHud,
+#hud #infoCreation {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
-#hud #infoCreation{
+
+#hud #infoCreation {
     justify-content: center;
 }
 
@@ -105,12 +110,14 @@ main {
     align-items: center;
     padding: 1vh 2vw;
 }
-#hud #infoCreation h1{
+
+#hud #infoCreation h1 {
     font-weight: 900;
     font-size: 1.5rem;
     margin: 1vh 2vw;
 }
-#hud #infoCreation h2{
+
+#hud #infoCreation h2 {
     font-size: 1.5rem;
     font-weight: 900;
     margin: 1vh 2vw;
@@ -144,28 +151,30 @@ main {
     /* Add a pointer on hover */
 }
 
-#overlayEnd #overlayEndContainer{
+#overlayEnd #overlayEndContainer {
     position: absolute;
-  top: 40%;
-  left: 50%;
-  background-color: beige;
-  width: 70vw;
-  height: 40vh;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
+    top: 40%;
+    left: 50%;
+    background-color: beige;
+    width: 70vw;
+    height: 40vh;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-#overlayEnd #overlayEndContainer #overlayResult{
+
+#overlayEnd #overlayEndContainer #overlayResult {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#overlayEnd #overlayEndContainer div{
+
+#overlayEnd #overlayEndContainer div {
     font-size: 4rem;
     font-weight: bolder;
 }
@@ -176,7 +185,9 @@ main {
 /* #region Responsive */
 
 @media only screen and (min-width: 528px) {
-    #hud #interactableHud, #hud #infoCreation {
+
+    #hud #interactableHud,
+    #hud #infoCreation {
         flex-direction: row;
     }
 
