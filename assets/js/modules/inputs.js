@@ -1,3 +1,4 @@
+import { putObjectInTab } from "./gameController.js";
 
 
 function bindInputOnDiv(div,column)
@@ -9,7 +10,7 @@ function bindInputOnDiv(div,column)
 
 function clickOnColumn(column)
 {
-
+    putObjectInTab(column);
 }
 
 

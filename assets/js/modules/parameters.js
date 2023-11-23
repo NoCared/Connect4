@@ -1,4 +1,4 @@
-let sizeRow = 6;
-let sizeColumn = 7;
+let sizeRow = 7;
+let sizeColumn = 6;
 
 export {sizeRow,sizeColumn};

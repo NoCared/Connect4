@@ -13,14 +13,14 @@ function initDisplay()
     // Calculer la taille des cases en fonction de la grille
     const cellSize = gridSize / Math.max(sizeColumn, sizeRow);
 
-    gridDiv.style.gridTemplateColumns = 'repeat(' + sizeColumn + ', ' + cellSize + 'px)';
-    gridDiv.style.gridTemplateRows = 'repeat(' + sizeRow + ', ' + cellSize + 'px)';
+    gridDiv.style.gridTemplateColumns = 'repeat(' + sizeRow + ', ' + cellSize + 'px)';
+    gridDiv.style.gridTemplateRows = 'repeat(' + sizeColumn + ', ' + cellSize + 'px)';
 
     for (let i = 0; i < sizeRow * sizeColumn; i++) {
         let createDiv = document.createElement("div");
         gridDiv.append(createDiv);
         createDiv.classList.add("circle");
-        bindInputOnDiv(createDiv,i%sizeColumn);
+        bindInputOnDiv(createDiv,i%sizeRow);
         createIndexTab(createDiv);
     }
 
