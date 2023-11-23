@@ -1,4 +1,6 @@
 import { sizeColumn,sizeRow } from "./parameters.js";
+import {bindInputOnDiv} from "./inputs.js";
+import { createIndexTab } from "./gameController.js";
 
 function initDisplay()
 {
@@ -18,6 +20,8 @@ function initDisplay()
         let createDiv = document.createElement("div");
         gridDiv.append(createDiv);
         createDiv.classList.add("circle");
+        bindInputOnDiv(createDiv,i%sizeColumn);
+        createIndexTab(createDiv);
     }
 
     // REMETTRE A NONE
